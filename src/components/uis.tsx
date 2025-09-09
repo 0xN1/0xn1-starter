@@ -23,7 +23,7 @@ export const LinkUnderline = ({
 
 export const Header = ({ title }: { title: string }) => {
   return (
-    <header className="flex justify-between items-center w-full">
+    <header className="absolute top-0 left-0 flex justify-between items-center w-full p-8">
       <Link href="/" className="hover:underline">
         home
       </Link>
@@ -34,7 +34,7 @@ export const Header = ({ title }: { title: string }) => {
 
 export const Footer = () => {
   return (
-    <footer className="flex justify-between items-center w-full">
+    <footer className="absolute bottom-0 left-0 flex justify-between items-center w-full p-8">
       <p>© {new Date().getFullYear()}</p>
       <div>0xn1</div>
     </footer>

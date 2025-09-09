@@ -1,7 +1,7 @@
 "use client";
 
-import Container from "@/app/container";
 import { usePathname } from "next/navigation";
+import Container from "@/app/container";
 import { Divider } from "@/components/uis";
 
 const SamplePage = () => {

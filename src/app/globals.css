@@ -3,13 +3,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --n1-cream: #dcdbce;
+  --n1-orange: #ff6b00;
+  --n1-darkgray: #1d1c1c;
+  --n1-gray: #888888;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-n1-cream: var(--n1-cream);
+  --color-n1-orange: var(--n1-orange);
+  --color-n1-darkgray: var(--n1-darkgray);
+  --color-n1-gray: var(--n1-gray);
+  --font-sans: var(--font-pf-sans);
+  --font-mono: var(--font-pf-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +25,25 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+/* Helper for debugging */
+.debug {
+  @apply border-[0.5px] border-dashed border-orange-500;
+}
+.debug-all {
+  @apply border-[0.5px] border-dashed border-orange-500;
+  & * {
+    @apply border-[0.5px] border-dashed border-orange-500;
+  }
+}
+
+.bg-grid {
+  @apply absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px];
+}
+
+.bg-grid-mask {
+  @apply absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_60%_80%_at_50%_0%,#000_20%,transparent_100%)];
 }
 
 body {
